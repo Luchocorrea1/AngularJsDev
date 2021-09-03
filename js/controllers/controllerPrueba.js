@@ -1,5 +1,4 @@
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function ($scope) {
+ngApp.controller('PruebaController', function ($scope) {
     $scope.modelo = {};
     $scope.modelo.firstName = "John";
     $scope.modelo.lastName = "Doe";

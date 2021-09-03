@@ -1,0 +1,30 @@
+First Name: <input type="text" ng-model="modelo.firstName"><br>
+Last Name: <input type="text" ng-model="modelo.lastName"><br>
+Cell Phone: <input type="text" ng-model="modelo.CellPhone"><br>
+<br>
+Full Name: {{modelo.firstName + " " + modelo.lastName}}
+<br>
+
+<input type="button" value="Save" ng-click="Guardar()" />
+
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>Last Name</th>
+            <th>Cell Phone</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="x in Datos">
+            <td>{{x.firstName}}</td>
+            <td>{{x.lastName}}</td>
+            <td>{{x.CellPhone}}</td>
+            <td><input type="button" value="Edit" ng-click="Edit($index)" /></td>
+            <td><input type="button" value="Delete" ng-click="Delete($index)" /></td>
+        </tr>
+    </tbody>
+</table>

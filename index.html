@@ -6,48 +6,34 @@
 	<link rel="Stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
 	<link rel="Stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
     <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
+	<script src="js/src/jquery-3.1.1.min.js"></script>
+    <!-- Librería de Angular -->
+	<script src="js/src/Angular-resources/ng-file-upload-shim.min.js"></script>
+	<script src="js/src/Angular-resources/angular.min.js"></script>
+	<script src="js/src/Angular-resources/angular-animate.min.js"></script>
+	<script src="js/src/Angular-resources/ng-file-upload.min.js"></script>
+	<script src="js/src/Angular-resources/angular-route.min.js"></script>
+	<script src="js/src/Angular-resources/angular-sanitize.min.js"></script>
+	<script src="js/src/Angular-resources/ngDialog.min.js"></script>
+	<script src="js/src/Angular-resources/angular-modal-service.js"></script>
+	<script src="js/src/Angular-resources/angular-messages.min.js"></script>
+	<script src="js/src/Angular-resources/angular-datepicker.js"></script>
+	<script src="js/src/Angular-resources/angular-material.min.js"></script>
+<!-- Librerias de bootstrap -->
     <script src="js/src/bootstrap.min.js"></script>
-
 	<script src="js/src/bootstrap-filestyle.min.js"></script>
 	<script src="js/src/bootstrap-datepicker.js"></script>
+
+    <!-- Librerías desarrollo -->
+	<script src="js/app.js"></script>
+	<script src="js/controllers/controllerPrueba.js"></script>
+
 </header>
 
 <body>
 
-    <div ng-app="myApp" ng-controller="myCtrl">
-
-        First Name: <input type="text" ng-model="modelo.firstName"><br>
-        Last Name: <input type="text" ng-model="modelo.lastName"><br>
-        Cell Phone: <input type="text" ng-model="modelo.CellPhone"><br>
-        <br>
-        Full Name: {{modelo.firstName + " " + modelo.lastName}}
-        <br>
-
-        <input type="button" value="Save" ng-click="Guardar()" />
-
-        <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>FirstName</th>
-                    <th>Last Name</th>
-                    <th>Cell Phone</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="x in Datos">
-                    <td>{{x.firstName}}</td>
-                    <td>{{x.lastName}}</td>
-                    <td>{{x.CellPhone}}</td>
-                    <td><input type="button" value="Edit" ng-click="Edit($index)" /></td>
-                    <td><input type="button" value="Delete" ng-click="Delete($index)" /></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container" ng-app="appPrueba">
+        <div ng-view></div>
     </div>
 
 
